@@ -3,7 +3,7 @@
 
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" `"$args`"" -Verb RunAs; exit }
 
-# disable Reboot task
+# Disable `Reboot` task
 if (Get-ScheduledTask | ?{ $_.TaskName -eq "Reboot" }) {
   # https://community.spiceworks.com/topic/2107576-windows-10-what-is-update-orchestrator-service?page=1#entry-7673299
   # https://superuser.com/a/1016445/311688
@@ -13,7 +13,7 @@ if (Get-ScheduledTask | ?{ $_.TaskName -eq "Reboot" }) {
   icacls "C:\Windows\System32\Tasks\Microsoft\Windows\UpdateOrchestrator\Reboot" /grant:r BUILTIN\Administrators:RX "NT AUTHORITY\SYSTEM:RX" Everyone:RX
 }
 
-# disable wake for enabled scheduled tasks that are allowed to wake
+# Disable wake for tasks that are allowed to wake
 Get-ScheduledTask |
 ?{ $_.Settings.WakeToRun -eq $true } |
 %{
@@ -26,7 +26,7 @@ Get-ScheduledTask |
   Set-ScheduledTask -TaskName $_.TaskName -TaskPath $_.TaskPath -Settings $_.Settings
 }
 
-# disable wake for devices that are allowed to wake (list of wake capable devices: powercfg -devicequery wake_from_any)
+# Disable wake for devices that are allowed to wake
 powercfg -devicequery wake_armed |
 %{
   write-host $_
