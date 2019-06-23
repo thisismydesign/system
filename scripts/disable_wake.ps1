@@ -4,17 +4,18 @@
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" `"$args`"" -Verb RunAs; exit }
 
 # disable Reboot task
-if (Get-ScheduledTask | ?{ $_.TaskName -eq "Reboot" -and $_.State -ne 'Disabled' }) {
+if (Get-ScheduledTask | ?{ $_.TaskName -eq "Reboot" }) {
   # https://community.spiceworks.com/topic/2107576-windows-10-what-is-update-orchestrator-service?page=1#entry-7673299
   # https://superuser.com/a/1016445/311688
   takeown /R /F "C:\Windows\System32\Tasks\Microsoft\Windows\UpdateOrchestrator";
   icacls "C:\Windows\System32\Tasks\Microsoft\Windows\UpdateOrchestrator\Reboot" /grant BUILTIN\Administrators:F
   Disable-ScheduledTask -TaskName "Reboot" -TaskPath "\Microsoft\Windows\UpdateOrchestrator";
+  icacls "C:\Windows\System32\Tasks\Microsoft\Windows\UpdateOrchestrator\Reboot" /grant:r BUILTIN\Administrators:RX "NT AUTHORITY\SYSTEM:RX" Everyone:RX
 }
 
 # disable wake for enabled scheduled tasks that are allowed to wake
 Get-ScheduledTask |
-?{ $_.Settings.WakeToRun -eq $true -and $_.State -ne 'Disabled' } |
+?{ $_.Settings.WakeToRun -eq $true } |
 %{
   write-host $_
   $_.Settings.WakeToRun = $false;
