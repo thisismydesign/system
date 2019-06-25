@@ -51,24 +51,3 @@ Customize and execute:
 
 ## Notes
 - `Windows Defender` is an antivirus app shipped with Windows, hence no antivirus installed
-- Code editors
-  - Visual Studio Code > Atom > Sublime
-  - VSCode has great git and terminal integration
-  - All three is sufficiently fast and lightweight
-- On the subject of operating systems:
-  - Linux:
-    - UX: moderate
-    - OS: has issues, awful troubleshooting
-    - 3rd party: no strong opinion
-  - Mac:
-    - UX: bad (Finder, Taskbar, Window handling)
-    - OS: has issues
-    - 3rd party: awful (e.g. TunnelBlick, NordVPN, Deluge, SourceTree don't go near these)
-  - Windows:
-    - UX: good
-    - OS: has more issues, awful CLI support
-    - 3rd party: better
-  - Combo of my choice: Windows + virtual dev env (VirtualBox, Vagrant, Docker)
-- If you have issues with Windows waking up by itself take a look at `disable_wakejobs.ps1` or [here for more options](https://superuser.com/q/973009/311688)
-- If you want to lock other BitLocker drives without having C: encrypted take a look at `lock_d.ps1`
-- If some native Ruby gems don't work try to reinstall them with `--platform=ruby` switch. E.g. `gem install eventmachine --platform=ruby`
