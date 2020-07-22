@@ -9,7 +9,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco install googlechrome vlc spotify dropbox putty.install qbittorrent steam firefox -y
 
 # Dev stuff
-choco install visualstudiocode git.install make wsl -y
+choco install visualstudiocode git.install make wsl2 wsl-ubuntu-1804 -y
 
 # Generate SSH key
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
