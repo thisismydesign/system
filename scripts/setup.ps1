@@ -4,19 +4,10 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Generic
-choco install googlechrome -y
-choco install firefox
-choco install vlc -y
-choco install spotify -y
-choco install dropbox -y
-choco install putty.install -y
-choco install qbittorrent -y
-choco install steam -y
+choco install googlechrome vlc spotify dropbox putty.install qbittorrent steam firefox -y
 
 # Dev stuff
-choco install visualstudiocode -y
-choco install git.install -y
-choco install make -y
+choco install visualstudiocode git.install make -y
 
 # Generate SSH key
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
@@ -29,18 +20,16 @@ refreshenv
 
 # Virtual dev stuff
 # -------------------
-choco install virtualbox -y
-choco install vagrant -y
+choco install virtualbox vagrant -y
 # -------------------
 
 # Ruby dev stuff
 # -------------------
-choco install ruby -y
 # Setup devkit for 2.4+
 # See also:
 #   - https://chocolatey.org/packages/msys2
 #   - https://github.com/oneclick/rubyinstaller2/wiki/FAQ
-choco install msys2 -y
+choco install ruby msys2 -y
 refreshenv
 powershell -executionpolicy bypass ridk install 2 3
 
