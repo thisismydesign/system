@@ -13,7 +13,7 @@ Set-ExecutionPolicy RemoteSigned
 
 - Check Windows Experience Score: `Get-CimInstance Win32_WinSat`
 - [Geekbench](https://www.geekbench.com/)
-- [InSpectre](https://www.grc.com/inspectre.htm) to check if computer performance is affected by CPU vulnerability fixes.
+- [InSpectre](https://www.grc.com/inspectre.htm) to check if computer performance is affected by CPU vulnerability fixes. See also: https://support.microsoft.com/en-us/help/4073119/protect-against-speculative-execution-side-channel-vulnerabilities-in
 
 ## [Setup](setup.md)
 
