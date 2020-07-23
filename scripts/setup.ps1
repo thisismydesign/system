@@ -8,8 +8,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # Generic
 choco install googlechrome vlc spotify dropbox putty.install qbittorrent steam firefox -y
 
+# Work stuff
+choco install zoom slack -y
+
 # Dev stuff
-choco install slack visualstudiocode git.install docker-desktop make powershell-core wsl2 wsl-ubuntu-1804 -y
+choco install visualstudiocode git.install docker-desktop make powershell-core wsl2 wsl-ubuntu-1804 -y
 
 # Generate SSH key
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
