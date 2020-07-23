@@ -12,7 +12,7 @@ choco install googlechrome vlc spotify dropbox putty.install qbittorrent steam f
 choco install zoom slack -y
 
 # Dev stuff
-choco install visualstudiocode git.install docker-desktop make powershell-core wsl2 wsl-ubuntu-1804 -y
+choco install visualstudiocode git.install make powershell-core wsl2 wsl-ubuntu-1804 microsoft-windows-terminal docker-desktop -y
 
 # Generate SSH key
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
