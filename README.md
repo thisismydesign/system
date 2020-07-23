@@ -9,6 +9,12 @@ To be able to execute scripts: open PowerShell (Start menu -> type `Windows Powe
 Set-ExecutionPolicy RemoteSigned
 ```
 
+#### Benchmark
+
+- Check Windows Experience Score: `Get-CimInstance Win32_WinSat`
+- [Geekbench](https://www.geekbench.com/)
+- [InSpectre](https://www.grc.com/inspectre.htm) to check if computer performance is affected by CPU vulnerability fixes.
+
 ## [Setup](setup.md)
 
 ## [Scripts](scripts)

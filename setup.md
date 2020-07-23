@@ -23,6 +23,7 @@ Customize and execute:
 ```
 
 ## Setup & Personalization
+- Windows Defender Real-time projection causes performance issues with WSL: https://github.com/microsoft/WSL/issues/1932. You can consider turning it off.
 - Turn on BitLocker on C:
 - Customize quick access (pin e.g. `C:\Users\username`, `\\WSL$\Ubuntu-18.04`)
 - Turn on Dark mode
