@@ -19,35 +19,30 @@ We'll use [Chocolatey](https://chocolatey.org/) from the command line to install
 
 Customize and execute:
 ```powershell
-.\setup.ps1
+.\scripts\setup.ps1
 ```
 
-## Setup
-- Pin user folder to quick access: `C:\Users\username`
-- Upload public key from `~/.ssh` to [GitHub](https://github.com/settings/keys)
-- Configure `git`
-  - `git config --global user.email "you@example.com"`
-  - `git config --global user.name "Your Name"`
-
-## Personalization
-- Taskbar
-  - `Taskbar settings`
-    - Use peek: true, Location: lest, Combine: when full
-    - Notification area: display all icons
-  - Unpin IE, assistant
-  - Pin Chrome on top
-- Explorer
-  - File -> Options -> View
-    - Show hidden files
-    - Untick hide extensions
-- Power options
+## Setup & Personalization
+- Turn on BitLocker on C:
+- Customize quick access (pin e.g. `C:\Users\username`, `\\WSL$\Ubuntu-18.04`)
+- Turn on Dark mode
+- Adjust power, sleep and energy settings
   - `Power & sleep settings` -> Additional power settings (on right)
     - Choose what power buttons do (on left) -> Change settings (on top)
       - Enable hibernate
-      - All buttons to Hibernate
   - Change Balanced plan or create own
     - Turn off hard disk: never
     - Sleep -> Allow wake timers -> Disable
+- Customize Taskbar
+  - `Taskbar settings`
+    - Use peek: true, Location: left, Combine: when full
+    - Notification area: display all icons
+  - Unpin IE, assistant
+  - Pin populr apps (e.g. Chrome, Task Manager)
+- Explorer
+  - File -> Change folder and search options -> View
+    - Show hidden files
+    - Untick hide extensions
 
 ## Notes
 - `Windows Defender` is an antivirus app shipped with Windows, hence no antivirus installed

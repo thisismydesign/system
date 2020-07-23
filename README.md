@@ -9,11 +9,6 @@ To be able to execute scripts: open PowerShell (Start menu -> type `Windows Powe
 Set-ExecutionPolicy RemoteSigned
 ```
 
-Manual steps:
-- Turn on BitLocker on C:
-- Turn on Dark mode
-- Adjust power, sleep and energy settings
-
 ## [Setup](setup.md)
 
 ## [Scripts](scripts)

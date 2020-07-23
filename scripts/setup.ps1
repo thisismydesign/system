@@ -21,6 +21,10 @@ choco install visualstudiocode git.install make powershell-core wsl2 wsl-ubuntu-
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
 timeout 2
 cat ~/.ssh/id_rsa.pub
+# Upload public key from `~/.ssh` to GitHub: https://github.com/settings/keys
+# Configure `git`
+# - `git config --global user.email "you@example.com"`
+# - `git config --global user.name "Your Name"`
 
 # Refresh env at the end so you can use installations w/o terminal restart
 # Nevertheless restart might still be required at this point ("The term 'xyz' is not recognized")
