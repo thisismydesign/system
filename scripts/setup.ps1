@@ -16,6 +16,7 @@ choco install visualstudiocode git.install make powershell-core wsl2 wsl-ubuntu-
 # Required: Manually make WSL available to non-admin users via:
 # Navigate to (C:\ProgramData\chocolatey\lib\wsl-ubuntu-1804\tools\unzipped) and change the folder permissions to full control for "users"
 # See also: https://github.com/microsoft/WSL/issues/5307#issuecomment-662925621
+wsl --set-default-version 2 # Follow instructions
 
 # Generate SSH key
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
