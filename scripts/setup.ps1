@@ -12,11 +12,15 @@ choco install googlechrome vlc spotify dropbox putty.install qbittorrent steam f
 choco install zoom slack -y
 
 # Dev stuff
-choco install visualstudiocode git.install make powershell-core wsl2 wsl-ubuntu-1804 microsoft-windows-terminal docker-desktop -y
+choco install visualstudiocode git.install make powershell-core microsoft-windows-terminal docker-desktop -y
+
+choco install wsl2 -y
 # Required: Manually make WSL available to non-admin users via:
 # Navigate to (C:\ProgramData\chocolatey\lib\wsl-ubuntu-1804\tools\unzipped) and change the folder permissions to full control for "users"
 # See also: https://github.com/microsoft/WSL/issues/5307#issuecomment-662925621
 wsl --set-default-version 2 # Follow instructions
+choco install wsl-ubuntu-1804 -y
+# To check WSL version run `docker` in the distro
 
 # Generate SSH key
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
