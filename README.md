@@ -8,7 +8,7 @@ Made for Windows 10 and Ubuntu via WSL: a best-of-both-worlds choice.
 
 Install Windows from a pendrive created with [Rufus](https://rufus.akeo.ie/) from the [official image](https://www.microsoft.com/software-download/windows10) or a custom one with updates integrated. BitLocker is not available on the Home version so it is recommended to install Windows 10 Pro or above.
 
-## Setup & Personalization
+## Setup & Customization
 
 - Check for updates
 - Turn on BitLocker (if your hardware doesn't support TPM [here's what to do](https://www.howtogeek.com/howto/6229/how-to-use-bitlocker-on-drives-without-tpm/))
@@ -46,17 +46,24 @@ Customize and execute the [install script](scripts\setup.ps1):
 .\scripts\setup.ps1
 ```
 
-##  Benchmark
+## Benchmark
 
 - Check Windows Experience Score: `Get-CimInstance Win32_WinSat`
 - [Geekbench](https://www.geekbench.com/)
 - [InSpectre](https://www.grc.com/inspectre.htm) to check if computer performance is affected by CPU vulnerability fixes. See also: https://support.microsoft.com/en-us/help/4073119/protect-against-speculative-execution-side-channel-vulnerabilities-in
+
+## Ubuntu Setup & Customization
+
+```sh
+cp scripts/.bash_aliases ~/.bash_aliases
+```
 
 ## Scripts
 
 - [`scripts/disable-wake.ps1`](scripts/disable-wake.ps1) Disable system wakes (updates during the night, random wakes of laptop in your bag, etc)
 - [`scripts/end-vr.ps1`](scripts/end-vr.ps1) End the Oculus VR service that listens to the headset being used (or placed on a stand..)
 - [`scripts/lock.ps1`](scripts/lock.ps1) Lock BitLocker drive
+- [`scripts/bash-functions.sh`](scripts/bash-functions.sh) Bash functions
 
 ## Notes
 - `Windows Defender` is an antivirus app shipped with Windows, hence no antivirus installed
