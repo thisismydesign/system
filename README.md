@@ -2,16 +2,11 @@
 
 #### Reproducible system setup
 
-Made for Windows 10 and Ubuntu via WSL. BitLocker is not available on the Home version so it is recommended to install Windows 10 Pro or above.
-
-To be able to execute scripts: open PowerShell (Start menu -> type `Windows PowerShell`) as an administrator and execute:
-```powershell
-Set-ExecutionPolicy RemoteSigned
-```
+Made for Windows 10 and Ubuntu via WSL.
 
 ## OS Install
 
-Install Windows from a pendrive created with [Rufus](https://rufus.akeo.ie/) from the [official image](https://www.microsoft.com/software-download/windows10) or a custom one with updates integrated.
+Install Windows from a pendrive created with [Rufus](https://rufus.akeo.ie/) from the [official image](https://www.microsoft.com/software-download/windows10) or a custom one with updates integrated. BitLocker is not available on the Home version so it is recommended to install Windows 10 Pro or above.
 
 ## Setup & Personalization
 
@@ -39,6 +34,11 @@ Install Windows from a pendrive created with [Rufus](https://rufus.akeo.ie/) fro
 ## App install
 
 We'll use [Chocolatey](https://chocolatey.org/) from the command line to install apps. [Ninite](https://ninite.com/) is a nice graphical alternative.
+
+To be able to execute scripts: open PowerShell (Start menu -> type `Windows PowerShell`) as an administrator and execute:
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
 
 Customize and execute:
 ```powershell
