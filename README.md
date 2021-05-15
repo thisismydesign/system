@@ -29,7 +29,6 @@ Install Windows from a pendrive created with [Rufus](https://rufus.akeo.ie/) fro
     - Show hidden files
     - Untick hide extensions
 - Customize quick access (pin e.g. `C:\Users\username`, `\\WSL$\Ubuntu-18.04`)
-- Customize `Startup Apps`
 - Turn on Dark mode (once per account)
 
 ## App install
@@ -45,6 +44,10 @@ Customize and execute the [install script](scripts\setup.ps1):
 ```powershell
 .\scripts\setup.ps1
 ```
+
+Customize
+- `Startup Apps`
+- `Default Apps`
 
 ## Benchmark
 
