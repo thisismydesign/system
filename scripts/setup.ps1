@@ -6,7 +6,10 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Generic
-choco install googlechrome vlc spotify dropbox putty.install qbittorrent steam firefox nordvpn -y
+choco install googlechrome vlc spotify dropbox putty.install qbittorrent steam firefox f.lux -y
+
+# Security & crypto
+choco install tor-browser nordvpn electrum -y
 
 # Work stuff
 choco install slack -y
