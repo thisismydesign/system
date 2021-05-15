@@ -40,7 +40,7 @@ To be able to execute scripts: open PowerShell (Start menu -> type `Windows Powe
 Set-ExecutionPolicy RemoteSigned
 ```
 
-Customize and execute:
+Customize and execute the [install script](scripts\setup.ps1):
 ```powershell
 .\scripts\setup.ps1
 ```
@@ -53,9 +53,9 @@ Customize and execute:
 
 ## Scripts
 
-- `scripts/disable-wake.ps1` Disable system wakes (updates during the night, random wakes of laptop in your bag, etc)
-- `scripts/end-vr.ps1` End the Oculus VR service that listens to the headset being used (or placed on a stand..)
-- `scripts/lock.ps1` Lock BitLocker drive
+- [`scripts/disable-wake.ps1`](scripts/disable-wake.ps1) Disable system wakes (updates during the night, random wakes of laptop in your bag, etc)
+- [`scripts/end-vr.ps1`](scripts/end-vr.ps1) End the Oculus VR service that listens to the headset being used (or placed on a stand..)
+- [`scripts/lock.ps1`](scripts/lock.ps1) Lock BitLocker drive
 
 ## Notes
 - `Windows Defender` is an antivirus app shipped with Windows, hence no antivirus installed
