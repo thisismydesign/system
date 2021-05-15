@@ -1,30 +1,11 @@
 # Windows setup
 
-## You'll need
-- Working computer with internet access
-- Software called [Rufus](https://rufus.akeo.ie/)
-- Windows installer
-- Pendrive
-
-## Preparation
-- Get a Windows image of your chosing. Easiest is the [official one](https://www.microsoft.com/software-download/windows10) but you might want to prefer one that has recent updates integrated.
-- Use Rufus to create a bootable pendrive
-
-## Installation
-- Install Windows as usual (set boot device if needed, etc)
-- Turn on BitLocker for your main drive (and possibly others as well). If your hardware doesn't support TPM [here's what to do](https://www.howtogeek.com/howto/6229/how-to-use-bitlocker-on-drives-without-tpm/).
-- Update Windows if needed (`Check for udpates`)
-
-We'll use [Chocolatey](https://chocolatey.org/) from the command line to install apps. [Ninite](https://ninite.com/) is a nice graphical alternative. Pro version ($1/mo) contains more apps.
-
-Customize and execute:
-```powershell
-.\scripts\setup.ps1
-```
+Install Windows from a pendrive created with [Rufus](https://rufus.akeo.ie/) from the [official image](https://www.microsoft.com/software-download/windows10) or a custom one with updates integrated.
 
 ## Setup & Personalization
-- Windows Defender Real-time projection causes performance issues with WSL: https://github.com/microsoft/WSL/issues/1932. You can consider turning it off.
-- Turn on BitLocker on C:
+
+- Check for updates
+- Turn on BitLocker (if your hardware doesn't support TPM [here's what to do](https://www.howtogeek.com/howto/6229/how-to-use-bitlocker-on-drives-without-tpm/))
 - Customize quick access (pin e.g. `C:\Users\username`, `\\WSL$\Ubuntu-18.04`)
 - Turn on Dark mode
 - Adjust power, sleep and energy settings
@@ -38,12 +19,21 @@ Customize and execute:
   - `Taskbar settings`
     - Use peek: true, Location: left, Combine: when full
     - Notification area: display all icons
-  - Unpin IE, assistant
-  - Pin populr apps (e.g. Chrome, Task Manager)
+  - Customize pins
 - Explorer
   - File -> Change folder and search options -> View
     - Show hidden files
     - Untick hide extensions
 
+## Install apps
+
+We'll use [Chocolatey](https://chocolatey.org/) from the command line to install apps. [Ninite](https://ninite.com/) is a nice graphical alternative.
+
+Customize and execute:
+```powershell
+.\scripts\setup.ps1
+```
+
 ## Notes
 - `Windows Defender` is an antivirus app shipped with Windows, hence no antivirus installed
+- Windows Defender Real-time projection causes performance issues with WSL: https://github.com/microsoft/WSL/issues/1932. You can consider turning it off.
