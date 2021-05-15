@@ -1,8 +1,8 @@
 # system
 
-#### Reproducible system setup
+### Reproducible system setup
 
-Made for Windows 10 and Ubuntu via WSL.
+Made for Windows 10 and Ubuntu via WSL: a best-of-both-worlds choice.
 
 ## OS Install
 
