@@ -27,6 +27,13 @@ choco install wsl-ubuntu-2004 -y
 # Check if you can access WSL drive. If not, see issue & solution: https://github.com/microsoft/WSL/issues/5307#issuecomment-662925621
 # To check WSL version run `docker` in the distro without Docker Desktop running. See "The command 'docker' could not be found in this <WSL 2> distro."
 
+# For memory issue workaround: https://github.com/microsoft/WSL/issues/4166
+# You can do `wsl --shutdown` from Windows to completely free memory
+# Create %UserProfile%\.wslconfig: (from a Windows editor e.g. Notepad to have Windows line endings)
+# [wsl2]
+# memory=8GB
+# swap=8GB
+
 # Generate SSH key
 C:/"Program Files"/Git/git-bash -c "ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa"
 timeout 2

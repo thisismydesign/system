@@ -35,3 +35,7 @@ alias bera="alias bera; bundle exec rubocop -A"
 # Kubernetes
 alias k="alias k; kubectl "
 alias hda="alias hda; helm list --all --short | xargs -L1 helm delete --purge"
+
+# WSL
+alias fm="alias fm; echo 1 > /proc/sys/vm/drop_caches" # https://devblogs.microsoft.com/commandline/memory-reclaim-in-the-windows-subsystem-for-linux-2/
+alias fmm="alias fmm; sync && echo 3 > /proc/sys/vm/drop_caches" # https://github.com/microsoft/WSL/issues/4166#issuecomment-570913524
