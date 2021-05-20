@@ -1,0 +1,39 @@
+{
+  // [OPTIONAL]
+
+  // https://code.visualstudio.com/docs/editor/integrated-terminal#_changing-how-the-terminal-is-rendered
+  // "terminal.integrated.rendererType": "dom",
+
+  // options for JS code formatting with Prettier
+  "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": true,
+
+  // [RECOMMENDED]
+  "git.confirmSync": false,
+  "extensions.ignoreRecommendations": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#795508",
+    "editor.selectionHighlightBackground": "#750d0d"
+  },
+  "window.zoomLevel": 0,
+  
+  // Many commands require a login shell on linux
+  "terminal.integrated.shell.linux": "bash",
+  "terminal.integrated.shellArgs.linux": [
+    "-l"
+  ],
+
+  // https://github.com/Microsoft/vscode/issues/42821#issuecomment-436627837
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/tmp/**": true,
+    "**/log/**": true,
+    "**/coverage/**": true
+  }
+}

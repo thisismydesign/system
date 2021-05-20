@@ -16,6 +16,8 @@ choco install slack -y
 
 # Dev stuff
 choco install visualstudiocode git.install make powershell-core microsoft-windows-terminal docker-desktop -y
+# VSCode settings, in Windows:
+# cp resources/settings.json %APPDATA%\Code\User\settings.json
 
 # WSL
 choco install wsl2 -y
