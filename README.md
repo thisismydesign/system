@@ -40,7 +40,7 @@ To be able to execute scripts: open PowerShell (Start menu -> type `Windows Powe
 Set-ExecutionPolicy RemoteSigned
 ```
 
-Customize and execute the [install script](resources\setup.ps1):
+Customize and execute the [install script](resources/setup.ps1):
 ```powershell
 .\resources\setup.ps1
 ```
@@ -63,10 +63,12 @@ cp resources/.bash_aliases ~/.bash_aliases
 
 ## Scripts
 
+- [`resources/.bash_aliases`](resources/.bash_aliases) Command aliases for Bash
 - [`resources/disable-wake.ps1`](resources/disable-wake.ps1) Disable system wakes (updates during the night, random wakes of laptop in your bag, etc)
 - [`resources/end-vr.ps1`](resources/end-vr.ps1) End the Oculus VR service that listens to the headset being used (or placed on a stand..)
 - [`resources/lock.ps1`](resources/lock.ps1) Lock BitLocker drive
 - [`resources/bash-functions.sh`](resources/bash-functions.sh) Bash functions
+- [`resources/settings.json`](resources/settings.json) VSCode settings
 
 ## Notes
 - `Windows Defender` is an antivirus app shipped with Windows, hence no antivirus installed
