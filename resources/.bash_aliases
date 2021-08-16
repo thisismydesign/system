@@ -14,6 +14,7 @@ alias disk="alias disk; df -h --total | grep total"
 # Git
 alias gc="alias gc; git checkout"
 alias gp="alias gp; git pull"
+alias gm="alias gm; git merge"
 
 # VSCode
 alias vei="alias vei; cat .vscode/extensions.json | jq '.recommendations[]' | xargs -l code --install-extension"
