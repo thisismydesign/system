@@ -23,11 +23,11 @@ choco install visualstudiocode git.install make powershell-core microsoft-window
 choco install wsl2 -y
 wsl --set-default-version 2
 choco install wsl-ubuntu-2004 -y
+wsl -l -v
 # Required setup steps:
 # Run `Ubuntu` from start menu (skip creating user to use root)
 # In Explorer go to \\wsl$
 # Check if you can access WSL drive. If not, see issue & solution: https://github.com/microsoft/WSL/issues/5307#issuecomment-662925621
-# To check WSL version run `docker` in the distro without Docker Desktop running. See "The command 'docker' could not be found in this <WSL 2> distro."
 
 # For memory issue workaround: https://github.com/microsoft/WSL/issues/4166
 # You can do `wsl --shutdown` from Windows to completely free memory
