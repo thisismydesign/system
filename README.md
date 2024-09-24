@@ -73,3 +73,6 @@ cp resources/.bash_aliases ~/.bash_aliases
 ## Notes
 - `Windows Defender` is an antivirus app shipped with Windows, hence no antivirus installed
 - Windows Defender Real-time projection causes performance issues with WSL: https://github.com/microsoft/WSL/issues/1932. You can consider turning it off.
+- WSL has memory leak issue:
+  - https://github.com/microsoft/WSL/issues/8725
+  - https://github.com/microsoft/WSL/issues/4166
