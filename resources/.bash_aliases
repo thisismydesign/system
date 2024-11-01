@@ -1,3 +1,5 @@
+# on Mac: .zshrc
+
 # Conventions
 # - always print the full command
 
@@ -20,9 +22,9 @@ alias gm="alias gm; git merge"
 alias vei="alias vei; cat .vscode/extensions.json | jq '.recommendations[]' | xargs -l code --install-extension"
 
 # Docker
-alias dc="alias dc; docker-compose"
-alias dcu="alias dcu; docker-compose up"
-alias dcur="alias dcur; docker-compose up --force-recreate --build"
+alias dc="alias dc; docker compose"
+alias dcu="alias dcu; docker compose up"
+alias dcur="alias dcur; docker compose up --force-recreate --build"
 alias dp="alias dp; docker system prune --all --force --volumes"
 alias ddf="alias ddf; docker system df"
 alias dpsa="alias dpsa; docker ps -a"
